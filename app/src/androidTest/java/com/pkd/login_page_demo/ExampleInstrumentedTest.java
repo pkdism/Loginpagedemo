@@ -17,6 +17,8 @@ import org.junit.runner.RunWith;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
@@ -58,7 +60,7 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
 
-        onView(withId(R.id.id_email)).perform(typeText("rashmi@dish.com"));
+        onView(withId(R.id.id_email)).perform(typeText("rashmi@dish.com")).check(matches(isDisplayed()));
         onView(withId(R.id.id_pw)).perform(typeText("12345678"));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.id_submit)).perform(click());
