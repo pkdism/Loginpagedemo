@@ -13,21 +13,13 @@ import java.lang.String;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.pkd.login_page_demo.MESSAGE";
-//    private Button submit_button;
+    public static final String EXTRA_MESSAGE = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        submit_button = (Button) findViewById(R.id.id_submit);
-//        submit_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openActivity2();
-//            }
-//        });
     }
 
 
@@ -38,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         String input_email = email.getText().toString();
         String input_pw = pw.getText().toString();
         String message = "";
-        if (input_email.equals("john.doe@example.com") && input_pw.equals("12345678")) {
+        if (input_email.equals("rashmi@dish.com") && input_pw.equals("12345678")) {
             message = "Login Successful";
         } else {
             message = "Incorrect Email or Password";
